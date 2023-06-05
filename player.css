@@ -1,1 +1,15 @@
-vou maquiar o projeto aqui
+button{
+    text-align: center;
+    color: white;
+    border-radius: 8px;
+}
+
+#nome{
+    text-align: center;
+    font-family:Arial;
+}
+
+*{
+    background-color: black;
+    color: white;
+}
