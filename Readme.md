@@ -1,1 +1,1 @@
-Estamos aprendendo a criar um player de música com este projeto
+Trabalho em grupo com Lorrany, Clara Sophia e Hellen 
