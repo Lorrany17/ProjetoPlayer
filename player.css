@@ -1,17 +1,26 @@
 button{
     text-align: center;
     color: white;
-    border-radius: 8px;
+    border-radius: 40px;
+    border-color: black;
 }
 
 #nome{
     text-align: center;
-    font-family:Arial;
-    border-style: solid;
-    border-color: red;
+    
 }
 
 *{
-    background-color: black;
+    background-color: black; 
     color: white;
+    border-color: crimson;
+
+}
+
+.cor{
+    background-color:blueviolet;
+}
+
+.audio{
+ text-align: center;   
 }
