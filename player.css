@@ -24,3 +24,11 @@ button{
 .audio{
  text-align: center;   
 }
+
+#aleatorio{
+    text-align: left;
+}
+
+#play{
+    text-align: center;
+}
