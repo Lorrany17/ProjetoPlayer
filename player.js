@@ -32,3 +32,9 @@ function tocandoAnterior(){
     musicas[indiceAtual].play()
 }
 
+function ordemAleatoria(){
+    musicas[indiceAtual].pause()
+    indiceAtual =  Math.floor(Math.random() * musicas.length);
+    musicas[indiceAtual].play()
+
+}
