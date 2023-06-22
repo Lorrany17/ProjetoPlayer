@@ -32,3 +32,7 @@ button{
 #play{
     text-align: center;
 }
+
+#pause{
+    display: none;
+}

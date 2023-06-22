@@ -1,4 +1,5 @@
 const play = document.querySelector("#play")
+const pause = document.querySelector("#pause")
 const aleatorio = document.querySelector("#aleatorio")
 const proximo = document.querySelector("#proximo")
 const voltar = document.querySelector("#voltar")
@@ -18,11 +19,22 @@ let indiceAtual = 0
 
 function tocandoEmOrdem(){
     musicas[indiceAtual].play();
+    document.querySelector("#pause").style.display = "inline";
+    document.querySelector("#play").style.display = "none";
+}
+
+function pausar(){
+    musicas[indiceAtual].pause();
+    document.querySelector("#pause").style.display = "none";
+    document.querySelector("#play").style.display = "inline";
 }
 
 function tocandoProximo(){
     musicas[indiceAtual].pause()
     indiceAtual ++
+    if(indiceAtual>=musicas.length){
+        indiceAtual = 0
+    }
     musicas[indiceAtual].play()
 }
 
@@ -38,3 +50,11 @@ function ordemAleatoria(){
     musicas[indiceAtual].play()
 
 }
+
+function acabou(){
+    
+    if(musicas[indiceAtual].ended)
+    tocandoProximo()
+}
+
+setInterval(acabou, 1000)
