@@ -13,6 +13,8 @@ const musica7 = document.querySelector("#musica7")
 const musica8 = document.querySelector("#musica8")
 const musica9 = document.querySelector("#musica9")
 const musica10 = document.querySelector("#musica10")
+const controle_musica = document.querySelector("#controle_musica")
+
 
 const musicas = []
 musicas.push(musica1);
@@ -25,33 +27,48 @@ musicas.push(musica7);
 musicas.push(musica8);
 musicas.push(musica9);
 musicas.push(musica10);
+
+
 let indiceAtual = 0
+controle_musica.src = musicas[indiceAtual].src;
 
 function tocandoEmOrdem(){
-    musicas[indiceAtual].play();
+   // musicas[indiceAtual].play();
     document.querySelector("#pause").style.display = "inline";
     document.querySelector("#play").style.display = "none";
+    if(controle_musica.src == musicas[indiceAtual].src) controle_musica.play();
+    else {
+        controle_musica.src = musicas[indiceAtual].src;
+        controle_musica.title = musicas[indiceAtual].title;
+
+        //return 0;
+    }
+    controle_musica.play();
 }
 
 function pausar(){
     musicas[indiceAtual].pause();
+    controle_musica.pause()
     document.querySelector("#pause").style.display = "none";
     document.querySelector("#play").style.display = "inline";
 }
 
 function tocandoProximo(){
-    musicas[indiceAtual].pause()
+    controle_musica.pause()
     indiceAtual ++
     if(indiceAtual>=musicas.length){
         indiceAtual = 0
     }
-    musicas[indiceAtual].play()
+    tocandoEmOrdem()
 }
 
 function tocandoAnterior(){
-    musicas[indiceAtual].pause()
+    controle_musica.pause()
     indiceAtual --
-    musicas[indiceAtual].play()
+    if(indiceAtual < 0){
+        indiceAtual = musicas.length-1
+    }
+    tocandoEmOrdem()
 }
 
 function ordemAleatoria(){
@@ -62,9 +79,10 @@ function ordemAleatoria(){
 }
 
 function acabou(){
-    
-    if(musicas[indiceAtual].ended)
-    tocandoProximo()
+    if(controle_musica.paused) pausar()
+    else tocandoEmOrdem()
+    if(controle_musica.ended) tocandoProximo()
+    console.log(controle_musica.title)
 }
 
-setInterval(acabou, 1000)
+setInterval(acabou, 500)
