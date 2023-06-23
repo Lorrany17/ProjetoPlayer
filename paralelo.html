@@ -8,20 +8,28 @@
     <link rel="stylesheet" href="paralelo.css">
 </head>
 <body>
-    <h4>Playlist Paralela</h4>
-    <img src="img2/Simpsons_Beatles.webp"></img>
-    <div>
-        <p> nome da música </p>
-        <p> nome da banda</p>
-        <div><i class="bi bi-heart"></i></div>
+<div class = "music-container">
+    <h4 id="tituloPlaylist">Playlist Paralela</h4>
+    <img id="cover" src="img2/simpsons.jpg" alt="Capa do Disco"></img>
+    <audio id="audio" src="midia/Henry Verus - Your Guilty Pleasure.mp3"></audio>
+    <div id="abaixoDaCapa">
+        <div id="song-info">
+            <div id="nomeMusica"> nome da música </div>
+            <div id="nomeArtista" class="corClara"> nome da banda</div>
+        </div>
+    <button id="curtir" class="button corClara"><i class="bi bi-heart"></i></button>
     </div>
-    <p> barra de progresso</p>
-    <div>
-        <div> <i class="bi bi-shuffle"></i></div>
-        <div> <i class="bi bi-skip-start-circle-fill"></i></div>
-        <div> <i class="bi bi-play-circle-fill"></i> <i class="bi bi-pause-circle-fill"></i></div>
-        <div> <i class="bi bi-skip-end-circle-fill"></i></div>
-        <div><i class="bi bi-arrow-clockwise"></i></div>
+    <div id="barraDeProgresso">
+        <div id = "barraAtual"></div>
     </div>
+    <div id="parteInferior">
+        <button id="aleatorio" class="button-navigate"> <i class="bi bi-shuffle"></i></button>
+        <button id="voltar" class="button-navigate"> <i class="bi bi-skip-start-circle-fill"></i></button>
+        <button id="play" class="button-biggest"> <i class="bi bi-play-circle-fill"></i></button>
+        <button id="proxima" class="button-navigate"> <i class="bi bi-skip-end-circle-fill"></i></button>
+        <button id="repetir" class="button-navigate"><i class="bi bi-arrow-clockwise"></i></button>
+    </div>
+</div>
+<script src="paralelo.js"></script>
 </body>
 </html>
