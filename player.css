@@ -7,8 +7,6 @@ button{
 
 #nome{
     text-align: center;
-    font-family: sans-serif;
-    
 }
 
 *{
@@ -23,7 +21,7 @@ button{
 }
 
 .audio{
- text-align: center;   
+ text-align: left;   
 }
 
 #aleatorio{
@@ -41,3 +39,8 @@ button{
 .controle_audio{
  text-align: center;
 }
+
+h2{
+    font-family: sans-serif;
+}
+
