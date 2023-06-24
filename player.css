@@ -21,7 +21,8 @@ button{
 }
 
 .audio{
- text-align: left;   
+ text-align: left;
+ font-family: sans-serif;   
 }
 
 #aleatorio{
@@ -44,3 +45,12 @@ h2{
     font-family: sans-serif;
 }
 
+p{
+   color:rgb(162, 163, 163) ;
+   
+}
+
+b{
+    text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF; 
+    color: white;
+}
