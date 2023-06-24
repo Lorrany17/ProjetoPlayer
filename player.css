@@ -45,7 +45,7 @@ h2{
     font-family: sans-serif;
 }
 
-p{
+small{
    color:rgb(162, 163, 163) ;
    
 }
@@ -54,3 +54,4 @@ b{
     text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF; 
     color: white;
 }
+

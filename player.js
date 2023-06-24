@@ -85,4 +85,4 @@ function acabou(){
     console.log(controle_musica.title)
 }
 
-setInterval(acabou, 500)
+setInterval(acabou, 100)
