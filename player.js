@@ -40,7 +40,7 @@ function tocandoEmOrdem(){
     else {
         controle_musica.src = musicas[indiceAtual].src;
         controle_musica.title = musicas[indiceAtual].title;
-
+       
         //return 0;
     }
     controle_musica.play();
